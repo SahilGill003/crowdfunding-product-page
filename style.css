@@ -399,9 +399,7 @@ hr {
 #success__button {
   padding: 10px 30px;
   border-radius: 20px;
-
 }
-
 
 #selection__modal>article {
   margin: 1.5rem 0;
@@ -410,13 +408,16 @@ hr {
   position: relative;
 }
 
+#selection__modal>article:last-child * {
+  pointer-events: none;
+}
+
 #close__modal svg {
   cursor: pointer;
 }
 
 #close__modal:hover * {
   opacity: 1;
-
 }
 
 .grid {
@@ -425,6 +426,14 @@ hr {
   align-items: center;
   padding: 1.5rem;
   padding-bottom: 1rem;
+}
+
+.grid {
+  pointer-events: none;
+}
+
+.grid:hover input {
+  outline-color: hsl(176, 50%, 47%);
 }
 
 .grid input {
@@ -457,8 +466,22 @@ hr {
   font-weight: 700;
 }
 
+.grid input,
+.card__heading label {
+  pointer-events: all;
+}
+
+.card__heading:hover input {
+  outline-color: hsl(176, 50%, 47%);
+}
+
 .card__heading label:hover {
-  color: hsl(176, 72%, 28%);
+  color: hsl(176, 50%, 47%)
+}
+
+.card__heading label:hover+small {
+  font-weight: 700;
+
 }
 
 .card__heading small {
@@ -701,4 +724,4 @@ hr {
   .selected__pledge input {
     text-align: left;
   }
-}  
+}

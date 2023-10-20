@@ -312,6 +312,17 @@ hr {
   font-size: 32px;
 }
 
+.article__heading {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.article__heading small {
+  color: hsl(176, 50%, 47%) !important;
+  font-weight: 500;
+}
+
 .item__quantity {
   display: flex;
   align-items: center;
@@ -632,13 +643,18 @@ hr {
     padding: 2rem;
   }
 
+  .article__heading {
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+  }
+
   .card__footer {
     display: flex;
   }
 
   .card__footer .item__quantity {
     margin-bottom: 0;
-
   }
 
   #selection__modal,
@@ -685,4 +701,4 @@ hr {
   .selected__pledge input {
     text-align: left;
   }
-}
+}  
